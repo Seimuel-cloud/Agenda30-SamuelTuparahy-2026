@@ -1,0 +1,120 @@
+/* Corpo da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #008000;
+    padding: 20px;
+    color: black;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 900px;
+    height: 70px; 
+}
+
+.header h1 {
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+    color: #006400;
+}
+
+/* Formulário */
+#cadastrar-titulo {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    font-style: bold;
+}
+
+.forms {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 400px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-style: bolder;
+}
+
+/* Inputs */
+#inputs {
+    background-color: green;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Botão Form */
+#cadastrar-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cadastrar-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Lista de contatos */
+body br {
+    line-height: 10px;
+}
+.contatos {
+    line-height: 1.6;
+    align-self: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões Contatos */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+a[href*="editar"] {
+    color: #27ae60;
+}
+
+a[href*="editar"]:hover {
+    text-decoration: underline;
+}
+
+a[href*="excluir"] {
+    color: #e74c3c;
+}
+
+a[href*="excluir"]:hover {
+    text-decoration: underline;
+}
+
