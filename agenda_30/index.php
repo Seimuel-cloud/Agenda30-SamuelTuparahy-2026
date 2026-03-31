@@ -3,6 +3,25 @@
         <title>Agenda - T30</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <script>
+            function mascaraTelefone(campo){
+                let valor = campo.value.replace(/\D/g,'');
+
+                if(valor.length > 11){
+                    valor = valor.substring(0,11);
+                }
+
+                valor = valor.replace(/^(\d{2})(\d)/g,"($1) $2");
+
+                if(valor.length > 10){
+                    valor = valor.replace(/(\d{5})(\d)/,"$1-$2");
+                }else{
+                    valor = valor.replace(/(\d{4})(\d)/,"$1-$2");
+                }
+
+                campo.value = valor;
+            }
+    </script>
     </head>
     <body>
         <div class="header">
@@ -10,9 +29,9 @@
         </div>
         <h2 id="cadastrar-titulo">CADASTRAR CONTATO</h2>
         <form action="salvar.php" method="POST" class="forms">
-            <b>Nome: </b><input type="text" name="nome" id="inputs"><br><br>
-            <b>Endereço: </b><input type="text" name="endereco" id="inputs"><br><br>
-            <b>Telefone: </b><input type="text" name="fone" id="inputs"><br><br>
+            <b>Nome: </b><input type="text" name="nome" id="inputs" required><br><br>
+            <b>Endereço: </b><input type="text" name="endereco" id="inputs" required><br><br>
+            <b>Telefone: </b><input type="text" name="fone" id="inputs" required onkeyup="mascaraTelefone(this)">
             <input type="submit" value="Cadastrar" id="cadastrar-btn">
         </form>
 
